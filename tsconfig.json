@@ -1,0 +1,61 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["DOM", "ES2020","ES2021.String"],
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": ".",
+    "sourceMap": true,
+    "rootDir": "",
+
+    /* Strict Type-Checking Options */
+    "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+
+    /* Additional Checks */
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+
+    /* Module Resolution Options */
+    "moduleResolution": "node",
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+
+    /* Advanced Options */
+    "forceConsistentCasingInFileNames": true,
+
+    /* Modules */
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["src/components"],
+      "@layouts": ["src/layouts"],
+      "@utils": ["src/utils"],
+      "@services": ["src/services"],
+      "@types": ["src/types"],
+      "@assets/*": ["src/assets/*"],
+      "@styles/*": ["src/styles/*"],
+      "@hooks/*": ["src/hooks"],
+    },
+
+    /* Plugins */
+    "plugins": [
+      {
+        "name": "typescript-plugin-css-modules",
+        "options": {
+          "camelCase": "dashes"
+        }
+      }
+    ]
+  },
+  "include": ["src", "src/custom.d.ts"],
+  "exclude": ["node_modules", "dist", "build", "storybook-static"]
+}
